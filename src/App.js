@@ -57,7 +57,13 @@ function App() {
   const clickCart = () => {
     setShowOverlay(!showOverlay)
     setShowCart(!showCart)
-    lockScroll()
+    if (showOverlay === true) {
+      unlockScroll()
+
+    } else {
+      lockScroll()
+
+    }
   }
   const clickTrangChu = () => {
     console.log("click trang chủ");
@@ -80,7 +86,7 @@ function App() {
   };
 
   const clickOverlay = () => {
-    setShowOverlay(false)
+    setShowOverlay(!showOverlay)
     setShowCart(!showCart)
     unlockScroll()
   }
