@@ -57,13 +57,19 @@ function App() {
   const clickCart = () => {
     setShowOverlay(!showOverlay)
     setShowCart(!showCart)
-    if (showOverlay === true) {
-      unlockScroll()
+  }
 
-    } else {
-      lockScroll()
-
-    }
+  const clickThemGioHang = () => {
+    console.log("thêm giỏ hàng")
+  }
+  const clickGiamSoLuong = () => {
+    console.log("giảm")
+  }
+  const clickTangSoLuong = () => {
+    console.log("tăng")
+  }
+  const clickXoaOrder = () => {
+    console.log("xoá")
   }
   const clickTrangChu = () => {
     console.log("click trang chủ");
@@ -160,7 +166,6 @@ function App() {
         <div id="main" className="timKiem">
           <div className="container">
             <div className="content" onClick={unlockScroll}>
-
               <div className="proItem">
                 <p>Kết quả tìm kiếm: {keyword}</p>
               </div>
@@ -172,10 +177,44 @@ function App() {
           <div className="container">
             <div className="content">
               <div className="proItem">
-                <p>trang chủ</p>
-              </div>
-              <div className="proItem">
-                <p>trang chủ</p>
+                <div className="hinhAnh">
+                  <img src="" alt="hình" />
+                </div>
+                <div className="text">
+                  <div className="tenSp">
+                    <p>Mì Hảo Hảo tôm chua cay</p>
+                  </div>
+                  <div className="giaSp">
+                    <p className="giaGiam">3,5000</p>
+                    <p className="giaAo">4,000</p>
+                  </div>
+                  <div className="order">
+                    <div className="giamSoLuong" onClick={clickGiamSoLuong}>
+                      <i className="fa-solid fa-minus"></i>
+                    </div>
+                    <div className="soLuong">
+                      <span>10</span>
+                    </div>
+                    <div className="tangSoLuong" onClick={clickTangSoLuong}>
+                      <i className="fa-solid fa-plus"></i>
+                    </div>
+                  </div >
+
+                  <div className="themVaoGio">
+                    <button type="button" onClick={clickThemGioHang}>Thêm vào giỏ</button>
+                  </div>
+                  <div className="giamGia">
+                    <span>-20%</span>
+                  </div>
+
+                  <div className="heart">
+                    <i className="fa-regular fa-heart"></i>
+                  </div>
+                  <div className="gif">
+                    <i className="fa-solid fa-gift"></i>
+                  </div>
+
+                </div>
               </div>
             </div>
           </div>
