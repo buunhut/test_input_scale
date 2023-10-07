@@ -24,6 +24,7 @@ function App() {
     setBackItem(true);
     setShowGoiY(true);
     setShowTimKiem(true);
+    lockScroll()
   };
   //nhập nội dung tìm kiếm
   const timKiem = (event) => {
@@ -152,7 +153,7 @@ function App() {
       {showTimKiem ? (
         <div id="main" className="timKiem">
           <div className="container">
-            <div className="content" onClick={clickBack}>
+            <div className="content" onClick={unlockScroll}>
               <div className="proItem">
                 <p>Kết quả tìm kiếm: {keyword}</p>
               </div>

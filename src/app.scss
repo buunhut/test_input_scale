@@ -115,8 +115,6 @@
   }
   &.timKiem {
     min-height: 100vh;
-    background-color: aquamarine;
-
   }
 }
 
@@ -136,13 +134,14 @@
     margin: 0 auto;
     .footerItem {
       text-align: center;
+      margin-top: 5px;
       i {
         color: white;
         font-size: 14px;
       }
       p {
         color: white;
-        font-size: 14px;
+        font-size: 13px;
       }
     }
   }
